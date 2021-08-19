@@ -27,9 +27,9 @@ public struct NPKRatio {
     public static let grow: NPKRatio = NPKRatio(n: 2.0, p: 1.0, k: 6.0)
     public static let bloom: NPKRatio = NPKRatio(n: 0.0, p: 5.0, k: 4.0)
     
-    public var column: ColumnTuple {
-        return ColumnTuple(values: [self.n, self.p, self.k])
-    }
+//    public var column: ColumnTuple {
+//        return ColumnTuple(values: [self.n, self.p, self.k])
+//    }
     
     
 //    var matrix: Matrix? {
