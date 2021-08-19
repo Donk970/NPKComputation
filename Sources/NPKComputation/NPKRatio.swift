@@ -1,6 +1,5 @@
 import Foundation
 
-
 /**
  The purpose of this playground is to develop the calculations to calculate
  the correct amounts of the three components of the General Hydroponics
@@ -43,7 +42,7 @@ public struct NPKRatio {
 //            []
 //        ]
 //        return try? Matrix(values: values)
-    }
+    
     
     /**
      Given a target ratio of this instance of NPKRatio calculate the nutrient mix.
