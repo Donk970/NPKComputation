@@ -3,17 +3,15 @@
 public struct Matrix: GenericMatrix, Codable {
     public var values: [[Double]]
     
-    public init( values: [[Double]]) throws {
+    public init( values: [[Double]]) {
         self.values = values
-        if !self.isValidMatrix { throw MatrixError.InvalidMatrixError(message: "Tried to initialize with an invalid matrix") }
     }
     
-    public init( rows: [N_Tuple]) throws {
+    public init( rows: [N_Tuple]) {
         self.values = rows.map { $0.values }
-        if !self.isValidMatrix { throw MatrixError.InvalidMatrixError(message: "Tried to initialize with an invalid matrix") }
     }
     
-    public init( columns: [N_Tuple]) throws {
+    public init( columns: [N_Tuple]) {
         let count: Int = columns[0].count
         var values: [[Double]] = Array<[Double]>(repeating: [], count: count)
         for column in columns {
@@ -22,7 +20,6 @@ public struct Matrix: GenericMatrix, Codable {
             }
         }
         self.values = values
-        if !self.isValidMatrix { throw MatrixError.InvalidMatrixError(message: "Tried to initialize with an invalid matrix") }
     }
 }
 
